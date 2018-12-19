@@ -31,3 +31,9 @@
     color: #94A1AD;
     margin-top: 4px;
 }
+
+@media (max-width: 800px) {
+    .card__body__banner {
+        height: 175px;
+    }
+}

@@ -93,3 +93,15 @@ img {
     max-width: 36%;
     margin: 20px auto;
 }
+
+@media (max-width: 800px) {
+    .card {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        max-width: 87.5%;
+    }
+}
