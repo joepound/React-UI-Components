@@ -8,8 +8,13 @@ import HeartsIcon from './../../images/heart.png';
 import MessageIcon from './../../images/message.png';
 
 const FooterSocialIcons = () => {
+  const socialCounterValues = ["-", "-", "-", ""];
   const socialIcons = [CommentsIcon, RetweetsIcon, HeartsIcon, MessageIcon]
-                        .map(icon => <a className="card__footer__social-links__icon" href="https://twitter.com/login?lang=en"><img src={icon}/> 0</a>);
+                        .map((icon, i) => 
+                          <a className="card__footer__social-links__icon" href="https://twitter.com/login?lang=en">
+                            <img src={icon}/> <span className="card__footer__social-links__counter">{socialCounterValues[i]}</span>
+                          </a>
+                        );
 
   return (
     <div className="card__footer__social-links">{socialIcons}</div>
