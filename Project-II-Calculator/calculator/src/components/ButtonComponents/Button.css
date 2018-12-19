@@ -1,0 +1,28 @@
+.calculator__button {
+    text-align: center;
+    font-size: 4.5rem;
+    
+    cursor: pointer;
+    padding: 25px 0;
+    outline: 1px solid #979797;
+}
+
+.calculator__button:hover {
+
+}
+
+.calculator__large-button {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.calculator__operation-button {
+    background-color: #A0001E;
+    font-size: 6.5rem;
+    color: white;
+    padding: 15px 0;
+}
+
+.calculator__number-button {
+    font-weight: bold;
+}
