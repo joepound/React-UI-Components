@@ -16,8 +16,7 @@
 }
 
 .calculator__large-button {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column: span 3;
 }
 
 .calculator__operation-button {

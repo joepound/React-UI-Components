@@ -7,7 +7,7 @@ import ActionButton from './components/ButtonComponents/ActionButton.js';
 import OperatorButton from './components/ButtonComponents/OperatorButton.js';
 import NumberButton from './components/ButtonComponents/NumberButton.js';
 
-const operators = ["÷", "×", "-", "+"];
+const operators = ["÷", "×", "−", "+"];
 const nums = [7, 8, 9, 4, 5, 6, 1, 2, 3];
 
 class App extends React.Component {

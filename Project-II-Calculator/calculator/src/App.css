@@ -99,20 +99,16 @@ img {
 }
 
 .calculator__operator-button-column {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 7;
+    grid-column: span 1;
+    grid-row: span 5;
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     width: 100%;
 }
 
 .calculator__number-pad {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 6;
+    grid-column: span 3;
+    grid-row: span 3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
