@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import './App.css';
 
@@ -7,20 +7,12 @@ import ActionButton from './components/ButtonComponents/ActionButton.js';
 import OperatorButton from './components/ButtonComponents/OperatorButton.js';
 import NumberButton from './components/ButtonComponents/NumberButton.js';
 
-const operatorKeys = ["÷", "×", "-", "+"];
-const numKeys = [7, 8, 9, 4, 5, 6, 1, 2, 3];
+const operators = ["÷", "×", "-", "+"];
+const nums = [7, 8, 9, 4, 5, 6, 1, 2, 3];
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super();
-  }
-
-  drawOperatorColumn() {
-    return operatorKeys.map(operatorKey => <OperatorButton key={operatorKey} buttonText={operatorKey} />)
-  }
-
-  drawNumPad() {
-    return numKeys.map(numKey => <NumberButton key={numKey.toString()} buttonText={numKey} />);
   }
 
   render() {
@@ -29,18 +21,16 @@ class App extends Component {
         <CalculatorDisplay />
         <ActionButton className="calculator__large-button" buttonText="clear" />
         <div className="calculator__operator-button-column">
-          {this.drawOperatorColumn()}
+          {operators.map(operator => <OperatorButton key={operator} buttonText={operator} />)}
           <ActionButton className="calculator__operation-button" buttonText="=" />
         </div> 
         <div className="calculator__number-pad">
-          {this.drawNumPad()}
+          {nums.map(num => <NumberButton key={num.toString()} buttonText={num} />)}
         </div> 
         <NumberButton className="calculator__large-button" buttonText="0" />
       </div>
     );
   }
 }
-
-
 
 export default App;

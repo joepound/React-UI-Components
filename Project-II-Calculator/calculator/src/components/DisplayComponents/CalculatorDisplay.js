@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './Display.css';
 
-class CalculatorDisplay extends Component {
+class CalculatorDisplay extends React.Component {
   constructor(props) {
     super(props);
   }

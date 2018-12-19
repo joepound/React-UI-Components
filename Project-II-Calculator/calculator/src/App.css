@@ -83,10 +83,6 @@ body {
     font-weight: 300;
 }
 
-/* p {
-    font-size: 4rem;
-    line-height: 18px;
-} */
 
 img {
     max-width: 100%;
@@ -122,14 +118,14 @@ img {
     width: 100%;
 }
 
-/* @media (max-width: 800px) {
-    .card {
+@media (max-width: 800px) {
+    .calculator {
         max-width: 50%;
     }
 }
 
 @media (max-width: 500px) {
-    .card {
+    .calculator {
         max-width: 87.5%;
     }
-} */
+}

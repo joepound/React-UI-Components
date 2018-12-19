@@ -1,14 +1,18 @@
 .calculator__button {
     text-align: center;
     font-size: 4.5rem;
-    
     cursor: pointer;
     padding: 25px 0;
     outline: 1px solid #979797;
 }
 
 .calculator__button:hover {
+    background-color: #404040;
+    color: snow;
+}
 
+.calculator__button:active {
+    outline: 2px double #979797;
 }
 
 .calculator__large-button {
@@ -23,6 +27,19 @@
     padding: 15px 0;
 }
 
+.calculator__operation-button:hover {
+    background-color: seashell;
+    color: #A00016; 
+}
+
+.calculator__operation-button:active {
+    outline: 2px double #A0001E;
+}
+
 .calculator__number-button {
     font-weight: bold;
+}
+
+.calculator__number-button:active {
+    font-weight: normal;
 }
