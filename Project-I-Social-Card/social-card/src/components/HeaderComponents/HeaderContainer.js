@@ -8,13 +8,13 @@ import HeaderContent from './HeaderContent.js';
 
 const HeaderContainer = () => {
   return (
-    <React.Fragment>
+    <div className="card__header">
       <ImageThumbnail />
-      <section className="card__header">
+      <section className="card__header__text">
         <HeaderTitle />
         <HeaderContent />
       </section>
-    </React.Fragment>
+    </div>
   );
 };
 
