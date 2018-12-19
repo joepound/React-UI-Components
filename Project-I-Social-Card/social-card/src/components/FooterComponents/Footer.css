@@ -6,5 +6,6 @@
 
 .card__footer__social-links__icon {
     display: inline-block;
+    cursor: pointer;
     margin-right: 12.5%;
 }

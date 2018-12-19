@@ -10,6 +10,11 @@
     margin-right: 1.5%;
 }
 
+.card__header__profile-image {
+    width: 51.56px;
+    height: 55.38px;
+}
+
 .card__header__text {
     width: 90%;
     margin-top: 5px;
