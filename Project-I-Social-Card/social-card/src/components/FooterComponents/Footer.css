@@ -1,0 +1,10 @@
+.card__footer {
+    align-self: flex-end;
+    width: 89%;
+    margin-top: 30px;
+}
+
+.card__footer__social-links__icon {
+    display: inline-block;
+    margin-right: 12.5%;
+}
