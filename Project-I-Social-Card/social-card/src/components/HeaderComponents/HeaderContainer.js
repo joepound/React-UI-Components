@@ -8,13 +8,13 @@ import HeaderContent from './HeaderContent.js';
 
 const HeaderContainer = () => {
   return (
-    <div className="card__header">
+    <header className="card__header">
       <ImageThumbnail />
       <section className="card__header__text">
         <HeaderTitle />
         <HeaderContent />
       </section>
-    </div>
+    </header>
   );
 };
 

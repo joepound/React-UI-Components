@@ -2,7 +2,7 @@
 
 .card__header {
     display: flex;
-    
+    margin-bottom: 15px;
 }
 
 .card__header__profile-image {
@@ -21,7 +21,12 @@
     margin: 0 1.5% 7.5px 0;
 }
 
-.card__header__text__heading__title {
+.card__header__text__heading__profile-name {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.card__header__text__heading__date-and-handle {
+    font-size: 1.2rem;
+    color: #94A1AD;
 }

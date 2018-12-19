@@ -65,18 +65,16 @@ table {
    ============= 
 */
 
-@font-face {
-    font-family: "Roboto";
-    src: url("https://fonts.googleapis.com/css?family=Roboto");
-}
-
 * {
     box-sizing: border-box;
 }
 
 html {
-    font-family: "Roboto";
     font-size: 62.5%;
+}
+
+body {
+    font-family: "Helvetica", "Arial", "Sans-serif";
 }
 
 p {
@@ -90,6 +88,8 @@ img {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     max-width: 36%;
     margin: 20px auto;
 }
