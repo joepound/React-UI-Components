@@ -42,3 +42,15 @@
 .calculator__number-button:active {
     font-weight: normal;
 }
+
+@media (max-width: 500px) {
+    .calculator__button {
+        font-size: 3rem;
+        padding: 20px 0;
+    }
+
+    .calculator__operation-button {
+        font-size: 5rem;
+        padding: 10px 0;
+    }
+}

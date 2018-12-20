@@ -92,7 +92,8 @@ img {
 .calculator {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    max-width: 28.5%;
+    width: 100%;
+    max-width: 451px;
     font-size: 4rem;
     outline: 1px solid #979797;
     margin: 20px auto;
@@ -116,12 +117,12 @@ img {
 
 @media (max-width: 800px) {
     .calculator {
-        max-width: 50%;
+        max-width: 400px;
     }
 }
 
 @media (max-width: 500px) {
     .calculator {
-        max-width: 87.5%;
+        max-width: 275px;
     }
 }

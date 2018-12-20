@@ -1,8 +1,16 @@
 .calculator__display-area {
     grid-column: span 4;
+    overflow-x: auto;
     background-color: black;
     text-align: right;
     font-size: 7.2rem;
     color: white;
     padding: 33px 3.25% 23px 0;
+}
+
+@media (max-width: 500px) {
+    .calculator__display-area {
+        font-size: 6.5rem;
+        padding: 20px 3.25% 10px 0;
+    }
 }
