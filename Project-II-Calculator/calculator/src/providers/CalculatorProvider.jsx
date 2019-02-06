@@ -11,6 +11,13 @@ function CalculatorProvider(props) {
   const [newOperation, setNewOperation] = useState(true);
 
   const calculatorContext = {
+    displayText,
+    a,
+    operator,
+    nextNum,
+    b,
+    newOperation,
+
     clear() {
       setDisplayText('0');
       setA(null);
@@ -28,11 +35,8 @@ function CalculatorProvider(props) {
           calculatorContext.evaluate(pressed);
         } else {
           const newDisplay = operator
-            ? this.state.displayText.substring(
-                0,
-                this.state.displayText.length - 1
-              ) + operator
-            : this.state.displayText + operator;
+            ? displayText.substring(0, displayText.length - 1) + pressed
+            : displayText + pressed;
           setDisplayText(newDisplay);
           setOperator(pressed);
           setNextNum(true);
@@ -42,7 +46,7 @@ function CalculatorProvider(props) {
 
     evaluate(newOperator) {
       if (a !== null) {
-        let currentA = 1;
+        let currentA = a;
         let currentB = b !== null ? b : a;
         let currentOperator = newOperator || operator;
         let result;
@@ -58,7 +62,7 @@ function CalculatorProvider(props) {
             result = currentA * currentB;
             break;
           case '÷':
-            result = currentB === 0 ? currentA / currentB : 'Error';
+            result = currentB !== 0 ? currentA / currentB : 'Error';
             break;
           default:
             result = 'Error';
@@ -100,24 +104,24 @@ function CalculatorProvider(props) {
           setDisplayText(displayText.substring(0, displayText.length - 1));
           setOperator(null);
           setNextNum(false);
-        }
-      } else if (displayText < 10) {
-        setDisplayText('0');
+        } else if (displayText < 10) {
+          setDisplayText('0');
 
-        if (b === null) {
-          setA(0);
+          if (b === null) {
+            setA(0);
+          } else {
+            setB(0);
+          }
         } else {
-          setB(0);
-        }
-      } else {
-        if (b === null) {
-          const newVal = Math.floor(a / 10);
-          setDisplayText(String(newVal));
-          setA(newVal);
-        } else {
-          const newVal = Math.floor(b / 10);
-          setDisplayText(String(newVal));
-          setB(newVal);
+          if (b === null) {
+            const newVal = Math.floor(a / 10);
+            setDisplayText(String(newVal));
+            setA(newVal);
+          } else {
+            const newVal = Math.floor(b / 10);
+            setDisplayText(String(newVal));
+            setB(newVal);
+          }
         }
       }
     },
@@ -140,9 +144,9 @@ function CalculatorProvider(props) {
       const keyPressed = e.keyCode || e.which;
 
       if (keyPressed >= 48 && keyPressed <= 57) {
-        calculatorContext.numPressed(String.fromCharCode(keyPressed));
+        calculatorContext.numberPressed(String.fromCharCode(keyPressed));
       } else if (keyPressed >= 96 && keyPressed <= 105) {
-        calculatorContext.numPressed(String(keyPressed - 96));
+        calculatorContext.numberPressed(String(keyPressed - 96));
       } else {
         const operatorKeyValues = {
           '106': '×',

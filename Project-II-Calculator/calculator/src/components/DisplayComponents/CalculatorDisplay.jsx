@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { CalculatorContext } from '../../providers/CalculatorProvider';
 
 import './Display.css';
 
-const CalculatorDisplay = props => {
-  return (
-    <div className="display-area">{props.displayText}</div>
-  );
-};
+function CalculatorDisplay(props) {
+  const { displayText } = useContext(CalculatorContext);
+
+  return <div className='display-area'>{displayText}</div>;
+}
 
 export default CalculatorDisplay;
